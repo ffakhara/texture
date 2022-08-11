@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+/* GeneralStyles and Resets */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header,main,footer {
+    width: 60rem;
+    margin: 0 auto;
+    background: #fff;
+
+}
+
+
+/*Header and Nav  */
+header {
+    display: flex;
+    align-items: center;
+    padding: 3rem 2.5rem;
+
+}
+
+header img {
+    height: 20px;
+    margin-right: 1.4rem;
+
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav li {
+    display: inline-block;
+    margin-left: 1.4rem;
+}
+
+/* _________________________ Main content ____________________*/
+
+main {
+    display: grid;
+    grid-template: 1fr 1.4fr / repeat(3, 1fr);
+    grid-template-areas:
+      "intro intro intro"
+      "article-1 article-2 article-3";
+  }
+
+  section {
+    grid-area: intro;
+    width: 75%;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    font-weight: 100;
+    padding: 2rem 0;
+    text-align: justify;
+  }
+
+  section a {
+    padding: 5px;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    background: #000;
+    text-transform: uppercase;
+    display: block;
+    width: 14.5rem;
+    margin-left: auto;
+  }
+  
+  section a img {
+    height: 10px;
+    position: relative;
+    top: 2px;
+  }
+
+  /* Images */
+
+article {
+    position: relative;
+    height: 30rem;
+    margin: 0.5rem;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .article-1 {
+    grid-area: article-1;
+    background-image: url("../images/white-box.jpg");
+  }
+  
+  .article-2 {
+    grid-area: article-2;
+    background-image: url("../images/room.jpg");
+    background-position: left center;
+  }
+  
+  .article-3 {
+    grid-area: article-3;
+    background-image: url("../images/black-white.jpg");
+  }
+
+  
+  article a {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+  }
+  
+  article h2 {
+    margin-top: 4rem;
+    text-shadow: -5px 0px 20px #2f2f2f;
+  }
+  
+  article img {
+    height: 2rem;
+    padding: 5px;
+    bottom: 35px;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0px 5px #ffffff40;
+  }
+  
+
+  
+  footer {
+    font-size: 1.2rem;
+    color: grey;
+    padding: 1.2rem;
+    text-align: center;
+  }
+  
+  
+  @media (max-width: 500px) {
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+    section {
+      width: 80%;
+    }
+  
+    section h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
